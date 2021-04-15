@@ -11,7 +11,7 @@ end
         puts "********************************\n"
         currenciesHash = {}
         i = 0
-        Mlist.each do |m|
+        mList.each do |m|
             currenciesHash[mList] = vList[i]
             i += 1
         end
