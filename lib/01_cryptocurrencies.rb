@@ -24,7 +24,7 @@ end
 # Crypto ayants la plus GROSSE valeur
         def getHightestBlockchainsValue(hashList)
             puts "********************************\n"
-            result = hashList.max_by {|m,v| v.to_f}
+            result = hashList.max_by {|m,v| v.to_m}
             min_results = hashList.select {|m,v| v == result[1]}
             min_results.each_with_index do |(m,v),index|
                 puts "\"#{m}\" est la crypto à la plus GROSSE valeur soit  #{"%.8f" % v}"
@@ -33,7 +33,7 @@ end
 # Crypto ayants la plus PETITE  valeur
 def getLowestBlockchains(hashList)
     puts "********************************\n"
-    result = hashList.min_by{|m,v| v.to_f}
+    result = hashList.min_by{|m,v| v.to_m}
     min_results = hashList.select {|m,v| v == result[1]}
     min_results.each_with_index do |(m,v), index|
         puts "\"#{m}\" est la crypto à la plus PETITE valeur => #{"%.8f" % v}"
@@ -42,7 +42,7 @@ end
 # Crypto inférieur à 600
     def getCurrenciesLess(hashList)
         puts "********************************\n"
-        results = hashList.select {|m,v| v.to_f < 6000}
+        results = hashList.select {|m,v| v.to_m < 6000}
         puts "Crypto inférieures à 6000 :\n"
         results.each do |m|
         print m
